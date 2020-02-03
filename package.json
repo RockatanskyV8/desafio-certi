@@ -1,0 +1,32 @@
+{
+  "name": "desafio-certi",
+  "version": "1.0.0",
+  "description": "conversor de números para extenso",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon ./bin/server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/RockatanskyV8/desafio-certi.git"
+  },
+  "keywords": [
+    "certi",
+    "desafio",
+    "numeros",
+    "inteiros",
+    "extenso"
+  ],
+  "author": "Lucas Santos",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/RockatanskyV8/desafio-certi/issues"
+  },
+  "homepage": "https://github.com/RockatanskyV8/desafio-certi#readme",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "express": "^4.17.1",
+    "nodemon": "^2.0.2"
+  }
+}
