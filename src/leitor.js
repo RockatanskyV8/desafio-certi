@@ -12,17 +12,15 @@ let milhares = ["", "", "dois", "três", "quatro", "cinco", "seis", "sete", "oit
 
 function digits2(num){
   let alg = num.split("");
-  let result = "";
   if( num < 10 ){
-    result = unidades[ alg[1] ]
+    return unidades[ alg[1] ]
   } else if( num >= 10 && num < 20 ){
     result = unidades[ num ]
   } else if ( num > 20 ){
     let num1 = alg[0];
     let num2 = alg[1];
-    result = dezenas[num1] + ' e ' + unidades[num2];
+    return dezenas[num1] + ' e ' + unidades[num2];
   }
-  return result;
 }
 
 let possibilidades = {
@@ -47,11 +45,15 @@ let possibilidades = {
                     }
 }
 
+function extenso(num){
+  return { 'extenso' : possibilidades[ (num.split("")).length ](num) }
+}
+
 module.exports = (num) => {
   let number = (String(num)).split("-");
   if (number.length == 1) {
-    return { 'extenso' : possibilidades[ (number[0].split("")).length ](number[0]) }
+    return extenso(number[0])
   } else if (number.length == 2){
-    return { 'extenso' : 'menos ' + possibilidades[ (number[1].split("")).length ](number[1]) }
+    return extenso(number[1])
   }
 }
