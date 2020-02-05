@@ -13,9 +13,12 @@ app.use(bodyParser.urlencoded({
 }));
 
 app.use('/:num', (req, res, next) => {
-  let algarismos = leitor(req.params.num)
-  console.log(algarismos)
-  res.status(200).send(algarismos);
+  try{
+    let algarismos = leitor(req.params.num)
+    res.status(200).send(algarismos);
+  }catch(e){
+    res.status(500).send({ 'erro' : 'Número muito alto. O maximo de casas decimais permitidas é 5' });
+  }
 });
 
 module.exports = app;
