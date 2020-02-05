@@ -33,10 +33,11 @@ Iniciar servidor docker:
 ```
 # docker run -it -p 9000:3000 node-docker
 ```
-Eu usei a porta 9000 porque era a porta livre que eu tinha disponiível, mas ela poder ser substituida por qualquer uma
+Eu usei a porta 9000 porque era a porta livre que eu tinha disponiível, mas ela poder ser substituida por qualquer uma. O nome 'node-docker' também pode ser trocado se preferir.
 
 ```
-# docker run -it -p <PORTA-DISPONIVEL>:3000 node-docker
+# docker build -t <NOME-PROJETO> .
+# docker run -it -p <PORTA-DISPONIVEL>:3000 <NOME-PROJETO>
 ```
 
 ## Requisições
